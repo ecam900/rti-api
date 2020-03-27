@@ -7,7 +7,16 @@ dotenv.config({
   path: './config/config.env'
 });
 
+// Route files
+const items = require('./routes/items');
+
 const app = express();
+
+// Body Parser
+app.use(express.json());
+
+// Mount routers
+app.use('/api/v1/items', items);
 
 const PORT = process.env.PORT || 5000;
 
