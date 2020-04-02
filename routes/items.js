@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+// @desc    Get all items
+// @route   GET /api/v1/items
+// @access  Public
 router.get('/', (req, res) => {
   res.status(200).json({
     success: true,
@@ -8,6 +11,9 @@ router.get('/', (req, res) => {
   });
 });
 
+// @desc    Get all items
+// @route   GET /api/v1/items
+// @access  Public
 router.post('/', (req, res) => {
   res.status(200).json({
     success: true,
@@ -15,6 +21,9 @@ router.post('/', (req, res) => {
   });
 });
 
+// @desc    Get all items
+// @route   GET /api/v1/items
+// @access  Public
 router.get('/:id', (req, res) => {
   res.status(200).json({
     success: true,
@@ -22,6 +31,9 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// @desc    Get all items
+// @route   GET /api/v1/items
+// @access  Public
 router.put('/:id', (req, res) => {
   res.status(200).json({
     success: true,
@@ -29,6 +41,9 @@ router.put('/:id', (req, res) => {
   });
 });
 
+// @desc    Get all items
+// @route   GET /api/v1/items
+// @access  Public
 router.delete('/:id', (req, res) => {
   res.status(200).json({
     success: true,
