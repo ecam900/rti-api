@@ -4,7 +4,7 @@ const ItemSchema = new mongoose.Schema({
   type: {
     type: String,
     required: true,
-    enum: ['Inventory Part', 'Assembly Item'],
+    enum: ['inventory part', 'assembly item'],
   },
   name: {
     type: String,
@@ -38,7 +38,11 @@ const ItemSchema = new mongoose.Schema({
   htsCode: String,
   boxesPerItem: Number,
   hotelAndRest: Boolean,
-  isActive: Boolean,
+  isActive: {
+    type: Boolean,
+    required: true,
+    default: true,
+  },
   photo: {
     type: String,
     default: 'no-photo.jpg',
